@@ -1251,7 +1251,7 @@ client.on('message', message => {
         let say = new Discord.RichEmbed()
             .addField('Emebad:', `${message.author.username}#${message.author.discriminator}`)
             .setDescription(args.join("  "))
-            .setColor(`${color`)
+            .setColor(`${color}`)
         message.channel.sendEmbed(say);
         message.delete();
     }
