@@ -1427,10 +1427,9 @@ client.on('message', message => {
             }
         });
         
-        
-let ar = JSON.parse(fs.readFileSync(`./Database/AutoRole`, `utf8`))
+     
+let ar = JSON.parse(fs.readFileSync(`AutoRole.json`, `utf8`))
 client.on('message', message => { 
-  
 
   var sender = message.author
  
@@ -1476,7 +1475,7 @@ Role : __${ar[message.guild.id].role}__`)
   }
  
  
-    fs.writeFile("./Database/AutoRole.json", JSON.stringify(ar), (err) => {
+    fs.writeFile("./AutoRole.json", JSON.stringify(ar), (err) => {
     if (err) console.error(err)
   });
  
